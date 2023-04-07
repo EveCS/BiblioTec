@@ -23,6 +23,20 @@ body {
 	object-fit: cover;
 }
 
+.imagenFondo {
+  background-image: url("../images/websiteerroranimation.gif");
+  background-repeat: no-repeat;
+  background-size: 800px 800px;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.imageFooter{
+	width: 100%;
+  position: absolute;
+	object-fit: cover;
+}
+
 
 /* ESTILOS TEXTO */
 
@@ -81,6 +95,19 @@ body {
     background: 0 0;
     border: 0;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+h3 {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  color: #018ABD
 }
 
 .nav {
