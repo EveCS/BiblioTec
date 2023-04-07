@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Almarai&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Alumni+Sans&display=swap" rel="stylesheet" />
+        <link href="./bootstrap-5.3.0-alpha3/dist/css/bootstrap.css" rel="stylesheet"/>
+        <link href="./css/styles.css" rel="stylesheet" />
+        <title>Registro BiblioTEC</title>
+    </head>
+    <body class="gradienteDiagonal">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col align-items-center">
+                    <br/><br/>
+                    <img src="./images/logo_bibliotec_linea.png" alt="Logo BiblioTEC" width="250px" height="90px"/>
+                    <div class="container" style="margin-left: 10px;">
+                        <h2 class="subtitulo">Registro</h2>
+                        <p class="descripcion">
+                            Bienvenido, favor ingresa los datos solicitados. Recuerde registrarse con su correo  institucional.
+                        </p>
+                    </div>
+                    <br/>
+                    <form class="form-floating">
+                        <input type="email" class="form-control" id="correo" placeholder="usuario@estudiantec.cr" 
+                        title="Recuerde usar su correo institucional." required>
+                        <label for="correo">Correo Institucional</label>
+                    </form>
+                    <br/>
+                    <form class="form-floating">
+                        <input type="password" class="form-control" id="contrasenna" placeholder="Contraseña"
+                        title="Usar mínimo 1 mayúscula, 1 minúscula, 1 caracter especial" required>
+                        <label for="contrasenna">Contraseña</label>
+                    </form>
+                    <br/>
+                    <button type="button" style="margin-left: 115px;" onclick="alert('Mandar llenar formulario!')" class="boton">Registrarse</button>
+                    <br/>
+                    <a style="margin-left: 140px;" class="enlaceAzul" href="./paginaError.html">¿Necesita Ayuda?</a><br/>
+                </div>
+                <div class="col">
+                    <nav>
+                        <br/>
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Acerca de</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Ayuda</a>
+                            </li>
+                            <li class="nav-item">
+                            </li>
+                        </ul>
+                    </nav>
+                    <br/><br/> <br/><br/> <br/>
+                    <img src="./images/imagenregistro.gif" alt="Registro" width="545px" height="545px"/>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>

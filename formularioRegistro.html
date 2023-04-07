@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Almarai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Alumni+Sans&display=swap" rel="stylesheet" />
+    <link href="./bootstrap-5.3.0-alpha3/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <title>Registro BiblioTEC</title>
+</head>
+
+<body class="gradienteSuperior">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <br /><br />
+                <img src="./images/logoLineaBlanco.png" alt="Logo BiblioTEC" />
+                <div class="container" style="margin-left: 10px;">
+                    <h2 class="subtituloBlanco">Registro Usuario</h2>
+                </div>
+                <br /><br /><br /><br />
+                <p class="descripcion" style="font-size: 15px;">
+                    Favor ingresar los datos solicitados para completar su registro
+                </p>
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" title="Ingrese su nombre." required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="primerApellido" class="form-label">Primer Apellido</label>
+                        <input type="text" class="form-control" id="primerApellido"
+                            title="Ingrese únicamente su primer apellido." required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="segundoApellido" class="form-label">Segundo Apellido</label>
+                        <input type="text" class="form-control" id="segundoApellido"
+                            title="Ingrese su segundo apellido." required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="cedula" class="form-label">Cedula</label>
+                        <input type="number" class="form-control" id="cedula" title="Cedula Identidad" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="carnet" class="form-label">Carnet</label>
+                        <input type="number" class="form-control" id="carnet" title="Carnet Estudiante" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="email" title="Correo Institucional"
+                            placeholder="Ej. usuario@estudiantec.cr" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="fechaNacimiento" class="form-label">Fecha Nacimiento</label>
+                        <input class="form-control" type="date" id="start" name="trip-start" value="2023-04-22"
+                            min="1950-01-01" max="2024-12-31" title="Fecha Nacimiento" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="estado" class="form-label">Estado</label>
+                        <select id="estado" class="form-select" title="Estado" required>
+                            <option selected>Elegir Estado</option>
+                            <option>Activo</option>
+                            <option>Inactivo</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for=" edad" class="form-label">Edad</label>
+                        <input type="number" class="form-control" id="edad" required>
+                    </div>
+                </form>
+            </div>
+            <div class="col align-items-center">
+                <nav>
+                    <br/>
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ayuda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Salir</a>
+                        </li>
+                    </ul>
+                </nav>
+                <br/><br/><br/><br/><br/><br/><br/><br/>
+                <div class="col-sm-4 objetfit">
+                    <img src="./images/imagenregistro2.gif">
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="boton" class="btn btn-primary" style="margin-left: 260px;"
+                        onclick="alert('Validar y enviar pagina principal!')">Enviar</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
