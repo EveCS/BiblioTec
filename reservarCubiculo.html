@@ -1,106 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <link href="https://fonts.googleapis.com/css?family=Almarai&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Alumni+Sans&display=swap" rel="stylesheet" />
-        <link href="./bootstrap-5.3.0-alpha3/dist/css/bootstrap.css" rel="stylesheet" />
-        <link href="./css/styles.css" rel="stylesheet" />
-        <title>Reservar Cubiculo</title>
-    </head>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Almarai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Alumni+Sans&display=swap" rel="stylesheet" />
+    <link href="./bootstrap-5.3.0-alpha3/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <title>Reservar Cubiculo</title>
+</head>
 
-    <body class="gradienteSuperior">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <br /><br />
-                    <img src="./images/logoLineaBlanco.png" alt="Logo BiblioTEC" />
-                    <div class="container" style="margin-left: 10px;">
-                        <h2 class="subtituloBlanco">Registro Usuario</h2>
-                    </div>
-                    <br /><br /><br /><br />
-                    <p class="descripcion" style="font-size: 15px;">
-                        Favor ingresar los datos solicitados para completar su registro
-                    </p>
-                    <form class="row g-3">
-                        <div class="col-md-6">
-                            <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" title="Ingrese su nombre." required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="primerApellido" class="form-label">Primer Apellido</label>
-                            <input type="text" class="form-control" id="primerApellido"
-                                title="Ingrese únicamente su primer apellido." required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="segundoApellido" class="form-label">Segundo Apellido</label>
-                            <input type="text" class="form-control" id="segundoApellido"
-                                title="Ingrese su segundo apellido." required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="cedula" class="form-label">Cedula</label>
-                            <input type="number" class="form-control" id="cedula" title="Cedula Identidad" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="carnet" class="form-label">Carnet</label>
-                            <input type="number" class="form-control" id="carnet" title="Carnet Estudiante" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="email" class="form-label">Correo</label>
-                            <input type="email" class="form-control" id="email" title="Correo Institucional"
-                                placeholder="Ej. usuario@estudiantec.cr" required>
-                        </div>
-                        <div class="col-md-4">
-                            <label for="fechaNacimiento" class="form-label">Fecha Nacimiento</label>
-                            <input class="form-control" type="date" id="start" name="trip-start" value="2023-04-22"
-                                min="1950-01-01" max="2024-12-31" title="Fecha Nacimiento" required>
-                        </div>
-                        <div class="col-md-4">
-                            <label for="estado" class="form-label">Estado</label>
-                            <select id="estado" class="form-select" title="Estado" required>
-                                <option selected>Elegir Estado</option>
-                                <option>Activo</option>
-                                <option>Inactivo</option>
-                                <option>...</option>
-                            </select>
-                        </div>
-                        <div class="col-md-2">
-                            <label for=" edad" class="form-label">Edad</label>
-                            <input type="number" class="form-control" id="edad" required>
-                        </div>
-                    </form>
+<body class="gradienteSuperior">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <br /><br />
+                <img src="./images/logoLineaBlanco.png" alt="Logo BiblioTEC" />
+                <div class="container" style="margin-left: 10px;">
+                    <h2 class="subtituloBlanco">Reservar Cubículo</h2>
                 </div>
-                <div class="col align-items-center">
-                    <nav>
+                <br /><br /><br /><br />
+                <p class="descripcion" style="width: 650px; font-size:14px">
+                    Favor ingresar los datos solicitados para reservar el cubículo, y confirme su reserva
+                    presionando "Reservar".
+                </p><br />
+                <form class="row g-3">
+                    <div class="col-md-4">
+                        <label for="fechaReserva" class="form-label">Fecha a reservar</label>
+                        <input class="form-control" type="date" id="start" name="trip-start" value="2023-04-22"
+                            min="2023-04-01" max="2050-12-31" title="Fecha a reservar" required><br />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="sede" class="form-label">Sede</label>
+                        <select id="sede" class="form-select" title="Sede" required>
+                            <option selected>Seleccionar</option>
+                            <option>Cartago</option>
+                            <option>San José</option>
+                            <option>Alajuela</option>
+                            <option>San Carlos</option>
+                            <option>Limón</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="tipoCubiculo" class="form-label">Tipo Cubículo</label>
+                        <select id="tipoCubiculo" size="1" class="form-select"
+                            title="Cubículos Especiales | Accessibilidad" required>
+                            <option selected>Seleccionar</option>
+                            <option>Individual</option>
+                            <option>Grupal</option>
+                            <option>Especializado</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="tipoCubiculo" class="form-label">Capacidad Cubículo</label>
+                        <select id="tipoCubiculo" size="1" class="form-select"
+                            title="Cubículos Especiales | Accessibilidad" required>
+                            <option selected>Seleccionar</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>más...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="tipoCubiculo" class="form-label">Cubículo</label>
+                        <select id="tipoCubiculo" size="1" class="form-select"
+                            title="Cubículos Especiales | Accessibilidad" required>
+                            <option selected>Código | Piso</option>
+                            <option>123 | A</option>
+                            <option>123 | B</option>
+                            <option>123 | C</option>
+                            <option>más...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="horario" class="form-label">Hora Entrada</label>
+                        <select id="horario" size="1" class="form-select" title="-
+                        Horario Biblioteca Figueres Ferrer
+                        Lunes a jueves de 7:00 a.m. a 9:00 p.m.
+                        Viernes de 7:00 a.m. a 8:00 p.m.                        
+                        Sábado de 8:00 a.m. a 4:00 p.m." required>
+                            <option selected>Seleccionar</option>
+                            <option>08:00 am</option>
+                            <option>09:00 am</option>
+                            <option>10:00 am</option>
+                            <option>11:00 am</option>
+                            <option>12:00 pm</option>
+                            <option>01:00 pm</option>
+                            <option>02:00 pm</option>
+                            <option>03:00 pm</option>
+                            <option>04:00 pm</option>
+                            <option>05:00 pm</option>
+                            <option>06:00 pm</option>
+                            <option>07:00 pm</option>
+                            <option>08:00 pm</option>
+                            <option>09:00 pm</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="horario" class="form-label">Hora Salida</label>
+                        <select id="horario" size="1" class="form-select" title="-
+                        Horario Biblioteca Figueres Ferrer
+                        Lunes a jueves de 7:00 a.m. a 9:00 p.m.
+                        Viernes de 7:00 a.m. a 8:00 p.m.                        
+                        Sábado de 8:00 a.m. a 4:00 p.m." required>
+                            <option selected>Seleccionar</option>
+                            <option>08:00 am</option>
+                            <option>09:00 am</option>
+                            <option>10:00 am</option>
+                            <option>11:00 am</option>
+                            <option>12:00 pm</option>
+                            <option>01:00 pm</option>
+                            <option>02:00 pm</option>
+                            <option>03:00 pm</option>
+                            <option>04:00 pm</option>
+                            <option>05:00 pm</option>
+                            <option>06:00 pm</option>
+                            <option>07:00 pm</option>
+                            <option>08:00 pm</option>
+                            <option>09:00 pm</option>
+                        </select>
+                    </div>
+                    <div class="col-6 align-content-center">
                         <br />
-                        <ul class="nav justify-content-end">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./Index.html">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./contacto.html">Contacto</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./Ayuda.html">Ayuda</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled">Cuenta</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled">Salir</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <br /><br /><br /><br /><br /><br /><br /><br />
-                    <div class="col-sm-4 objetfit">
-                        <img src="./images/imagenregistro2.gif">
+                        <p class="descripcion" style="width: 650px; font-size:14px">
+                            A continuación, favor presionar el botón ‘RESERVAR’ para confirmar el apartado del cubículo
+                            correspondiente. Recuerde que el cubículo se reservará hasta la confirmación del mismo, si
+                            no confirma antes de la hora de reserva esta se cancelará automáticamente.
+                            ¡Gracias!
+                        </p>
                     </div>
-                    <div class="col-12">
-                        <button type="submit" class="boton" class="btn btn-primary" style="margin-left: 260px;"
-                            onclick="alert('Validar y enviar pagina principal!')">Enviar</button>
-                    </div>
+                </form>
+            </div>
+            <div class="col align-items-center">
+                <nav>
+                    <br />
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./Index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Ayuda.html">Ayuda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="./paginaError.html">Cuenta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="./Index.html">Salir</a>
+                        </li>
+                    </ul>
+                </nav>
+                <br /><br /><br /><br /><br /><br />
+                <div class="col-sm-4 objetfit">
+                    <img src="./images/timeManagement.gif" style="margin-left: 16px;">
                 </div>
             </div>
         </div>
-    </body>
+        <div class="row" style="margin-top: -10px;">
+            <div class="col-6"></div>
+            <div class="col-3">
+                <a href="./paginaNotificacion.html">
+                    <button type="submit" class="boton" class="btn btn-primary"
+                        onclick="alert('Valida,hacer reserva y correo! Debe volver a menu Principal')">Reservar</button>
+                </a>
+
+            </div>
+            <div class="col-3">
+                <a href="./paginaInicioEstudiante.html">
+                    <button type="submit" class="boton" class="btn btn-primary"
+                        onclick="alert('Guarda info y vuelve!')">Regresar</button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</body>
+
 </html>

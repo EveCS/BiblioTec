@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Almarai&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Alumni+Sans&display=swap" rel="stylesheet" />
+    <link href="./bootstrap-5.3.0-alpha3/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link href="./css/styles.css" rel="stylesheet" />
+    <title>Mis Reservas</title>
+</head>
+
+<body class="gradienteDiagonal">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col align-items-center">
+                <nav>
+                    <br />
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="./paginaInicioEstudiante.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Ayuda.html">Ayuda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./paginaError.html">Cuenta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Index.html">Salir</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="col align-items-center">
+                    <img src="./images/logo_bibliotec_linea.png" alt="Logo BiblioTEC" width="250px" height="90px" />
+                    <div class="container" style="margin-left: 10px;">
+                        <h2 class="subtitulo">Reservaciones</h2>
+                        <p class="descripcion" style="font-size: 18px; width: 800px;">
+                            A continuación, se muestran los cubículos apartados y reservados ligados a su cuenta.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-6 align-content-center">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">#</th>
+                            <th scope="col">Codigo</th>
+                            <th scope="col">Capacidad</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Horario</th>
+                            <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="col"><input type="checkbox" /></th>
+                            <th scope="row">1</th>
+                            <td>12234</td>
+                            <td>Especial</td>
+                            <td>3</td>
+                            <td>12/04/23</td>
+                            <td>8:00am-11:00am</td>
+                            <td>Reservado</td>
+                        </tr>
+                        <tr>
+                            <th scope="col"><input type="checkbox" /></th>
+                            <th scope="row">2</th>
+                            <td>12234</td>
+                            <td>Grupal</td>
+                            <td>6</td>
+                            <td>12/04/23</td>
+                            <td>8:00am-11:00am</td>
+                            <td>Sin Reserva</td>
+                        </tr>
+                        <tr>
+                            <th scope="col"><input type="checkbox" /></th>
+                            <th scope="row">3</th>
+                            <td>12234</td>
+                            <td>Individual</td>
+                            <td>1</td>
+                            <td>12/04/23</td>
+                            <td>8:00am-11:00am</td>
+                            <td>Reservado</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br /><br />
+                <a>
+                    <button type="button" onclick="alert('Valida y elimina cubículos!')" class="boton"
+                        style="margin-left: -12px;">Eliminar</button>
+                </a>
+                <a href="./paginaNotificacion.html">
+                    <button type="button" onclick="alert('Valida y confirma cuículo, envia correo!')"
+                        style="margin-left: 20px;" class="boton">Confirmar</button>
+                </a>
+                <a href="./paginaInicioEstudiante.html"><button type="button" class="boton"
+                        style="margin-left: 20px;">Regresar</button></a>
+            </div>
+            <div class="col-4">
+                <br /><br /><br />
+                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_fxvz0c.json" background="transparent"
+                    speed="1" style="width: 500px; height: 500px; margin-left:200px;margin-top:-200px;" loop autoplay>
+                </lottie-player>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
