@@ -15,8 +15,7 @@
     <link href="./bootstrap-5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" rel="stylesheet" />
 
     <link href="./css/styles.css" rel="stylesheet" />
-    
-    <title>Principal Estudiante</title>
+    <title>Principal Administrativo</title>
 </head>
 
 <body class="gradienteSuperior">
@@ -28,21 +27,25 @@
                 <div class="container" style="margin-left: 10px;">
                     <h2 class="subtituloBlanco">Menú Principal</h2>
                 </div>
-                <br /><br /><br /><br /><br />
-                <p class="descripcion" style="width: 600px;">
+                <br /><br /><br /><br />
+                <p class="descripcion" style="width: 800px;">
                     El Sistema de Bibliotecas del TEC (SIBITEC) les da la más cordial bienvenida. Nuestro principal
-                    objetivo es proporcionar, por este medio, una amplia disponibilidad de servicios para la reserva de
-                    cubículos y salas de estudio, para realizar cada uno de sus proyectos grupales o individuales.
+                    objetivo es proporcionar, por este medio, una amplia disponibilidad de servicios para la
+                    administración misma del sistema.
+                    Mediante BiblioTEC puedes agregar, eliminar o modificar los cubículos del edificio, va a poder
+                    gestionar el uso de los tiempos de cada cubículo, su disponibilidad y cancelar reservas en caso
+                    necesite mantenimiento o algún otro motivo. Además, puede gestionar las cuentas de estudiantes así
+                    como
+                    agregar nuevos usuarios, modificar o ver el historial de sus reservaciones.
                 </p>
 
             </div>
             <div class="col align-items-center">
                 <nav>
                     <br />
-                    <ul class="nav justify-content-end">
+                    <ul class="nav justify-content-end" style="margin-left: -100px;">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page"
-                                href="./paginaInicioEstudiante.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="./paginaInicioAdmin.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./contacto.html">Contacto</a>
@@ -59,25 +62,24 @@
                     </ul>
                 </nav>
                 <br /><br />
-                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_hxart9lz.json"
-                    background="transparent" speed="1" style="width: 500px; height: 500px; margin-left:60px;" loop autoplay>
+
+                <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_K7aZUG.json" background="transparent"
+                    speed="1" style="width: 450px; height: 450px;" loop autoplay>
                 </lottie-player>
             </div>
-
-        </div><br />
+        </div>
+        <br /><br /><br />
         <div class="row" style="margin-top: -50px;">
-            
             <div class="col-4 align-items-center">
-                <a href="./reservarCubiculo.html">
-                    <button type="submit" class="boton" style="width: 350px;" class="btn btn-primary">Ver
+                <a href="./gestionCubiculos.html">
+                    <button type="submit" class="boton" style="width: 350px;" class="btn btn-primary">Gestionar
                         Cubículos</button>
                 </a>
-
             </div>
             <div class="col-4 align-items-center">
-                <a href="./listaReservas.html">
-                    <button type="submit" class="boton" style="width: 350px;"
-                        class="btn btn-primary">Reservaciones</button>
+                <a href="./gestionEstudiantes.html">
+                    <button type="submit" class="boton" style="width: 350px;" class="btn btn-primary">Gestionar
+                        Estudiantes</button>
                 </a>
             </div>
             <div class="col-1 align-items-center"></div>

@@ -4,8 +4,18 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Almarai&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Alumni+Sans&display=swap" rel="stylesheet" />
-    <link href="./bootstrap-5.3.0-alpha3/dist/css/bootstrap.css" rel="stylesheet" />
+    
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <link href="./bootstrap-5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./bootstrap-5.3.0-alpha3/dist/css/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="./bootstrap-5.3.0-alpha3/dist/css/bootstrap-reboot.min.css" rel="stylesheet" />
+
+    <link href="./bootstrap-5.3.0-alpha3/dist/js/bootstrap.min.js" rel="stylesheet" />
+    <link href="./bootstrap-5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" rel="stylesheet" />
+
     <link href="./css/styles.css" rel="stylesheet" />
+    
     <title>Reservar Cubiculo</title>
 </head>
 
@@ -71,7 +81,7 @@
                         <label for="tipoCubiculo" class="form-label">Cubículo</label>
                         <select id="tipoCubiculo" size="1" class="form-select"
                             title="Cubículos Especiales | Accessibilidad" required>
-                            <option selected>Código | Piso</option>
+                            <option selected>ID | Nombre</option>
                             <option>123 | A</option>
                             <option>123 | B</option>
                             <option>123 | C</option>
@@ -79,8 +89,8 @@
                         </select>
                     </div>
                     <div class="col-md-3">
-                        <label for="horario" class="form-label">Hora Entrada</label>
-                        <select id="horario" size="1" class="form-select" title="-
+                        <label for="horarioI" class="form-label">Hora Inicio</label>
+                        <select id="horarioI" size="1" class="form-select" title="-
                         Horario Biblioteca Figueres Ferrer
                         Lunes a jueves de 7:00 a.m. a 9:00 p.m.
                         Viernes de 7:00 a.m. a 8:00 p.m.                        
@@ -103,8 +113,8 @@
                         </select>
                     </div>
                     <div class="col-md-3">
-                        <label for="horario" class="form-label">Hora Salida</label>
-                        <select id="horario" size="1" class="form-select" title="-
+                        <label for="horarioS" class="form-label">Hora Salida</label>
+                        <select id="horarioS" size="1" class="form-select" title="-
                         Horario Biblioteca Figueres Ferrer
                         Lunes a jueves de 7:00 a.m. a 9:00 p.m.
                         Viernes de 7:00 a.m. a 8:00 p.m.                        
@@ -168,14 +178,14 @@
             <div class="col-6"></div>
             <div class="col-3">
                 <a href="./paginaNotificacion.html">
-                    <button type="submit" class="boton" class="btn btn-primary"
+                    <button type="submit" class="boton" class="btn btn-primary" style="margin-left:80px"
                         onclick="alert('Valida,hacer reserva y correo! Debe volver a menu Principal')">Reservar</button>
                 </a>
 
             </div>
             <div class="col-3">
                 <a href="./paginaInicioEstudiante.html">
-                    <button type="submit" class="boton" class="btn btn-primary"
+                    <button type="submit" class="boton" class="btn btn-primary" style="margin-left:120px;"
                         onclick="alert('Guarda info y vuelve!')">Regresar</button>
                 </a>
             </div>
