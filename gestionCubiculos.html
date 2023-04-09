@@ -108,15 +108,6 @@
                                 <td>3</td>
                                 <td>Mantenimiento</td>
                             </tr>
-                            <tr>
-                                <th scope="col"><input type="checkbox" /></th>
-                                <th scope="row">4</th>
-                                <td>12234</td>
-                                <td>nombre</td>
-                                <td>Especial</td>
-                                <td>3</td>
-                                <td>Libre</td>
-                            </tr>
                     </tbody>
                 </table>
                 <!--Fin de la tabla-->
@@ -127,7 +118,7 @@
                     <!--Grupo botones-->
 
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button onclick="window.modalEliminar.showModal();" type="button"
+                        <button onclick="window.modalEliminar.showModal();" 
                             class="btn btn-primary">Eliminar</label></button>
                         <button onclick="window.modalModificarC.showModal();" type="button"
                             class="btn btn-primary">Modificar Cubículo</button>
@@ -138,7 +129,8 @@
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button onclick="window.modalTiempoUso.showModal();" type="button"
                             class="btn btn-primary">Gestionar Tiempo Uso</button>
-                        <button type="button" class="btn btn-primary">Ver Asignaciones</button>
+                        <button onclick="window.modalAsignaciones.showModal();" type="button"
+                            class="btn btn-primary">Ver Asignaciones</button>
                         <button onclick="window.location.href='./paginaInicioAdmin.html'" type="button"
                             class="btn btn-primary">Salir</button>
                     </div>
@@ -166,9 +158,7 @@
                         realice la modificación del cubículo</p>
                     <div class="row">
                         <div class="col-6">
-                            <p class="descripcion" style="font-size: 15px;">
-                                Favor ingresar los datos solicitados para completar su registro
-                            </p>
+                            <br />
                             <form class="row g-3">
 
                                 <div class="col-md-2">
@@ -249,18 +239,14 @@
 
                 <!--Ventana Emergente Agregar-->
                 <dialog id="modalAgregarC" class="ventana" style="width:auto;height:auto;">
-                    <br /><br />
                     <img src="./images/logo_bibliotec_linea.png" alt="Logo BiblioTEC" />
                     <h3 class="subtitulo" style="font-size: 26px;">Agregar Cubículo</h3>
                     <p class="descripcion" style="font-size: 16px; width:auto; height:auto">Ingrese los datos
-                        solicitados para agregar ek cubículo</p>
+                        solicitados para agregar el cubículo</p>
                     <div class="row">
                         <div class="col-6">
-                            <p class="descripcion" style="font-size: 15px;">
-                                Favor ingresar los datos solicitados para completar su registro
-                            </p>
+                            <br />
                             <form class="row g-3">
-
                                 <div class="col-md-2">
                                     <label for="idCubiculo" class="form-label">ID</label>
                                     <input type="text" class="form-control" id="idCubiculo"
@@ -320,9 +306,9 @@
                                 style="width:250px; margin-left: 20px;">Cerrar</button>
                             <button class="btn btn-primary" onclick="alert('refrescar y guardar info del cubiculo')"
                                 style="width:250px; margin-left: 50px;">Guardar</button>
+                                
                         </div>
                         <div class="col-4 align-items-center">
-                            <br /><br />
                             <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_Nggzi9cLYX.json"
                                 background="transparent" speed="1"
                                 style="width: 600px; height: 600px; margin-top:-200px; position:relative" loop autoplay>
@@ -335,14 +321,12 @@
                 <dialog id="modalTiempoUso" class="ventana" style="width:auto;height:auto;">
                     <br /><br />
                     <img src="./images/logo_bibliotec_linea.png" alt="Logo BiblioTEC" />
-                    <h3 class="subtitulo" style="font-size: 26px;">Agregar Cubículo</h3>
+                    <h3 class="subtitulo" style="font-size: 26px;">Gestionar Disnibilidad Cubículo</h3>
                     <p class="descripcion" style="font-size: 16px; width:auto; height:auto">Modifique la disponibilidad
                         de los cubículos a más detalle.</p>
                     <div class="row">
                         <div class="col-6">
-                            <p class="descripcion" style="font-size: 15px;">
-                                Favor ingresar los datos solicitados para completar su registro
-                            </p>
+                            <br />
                             <form class="row g-3">
 
                                 <div class="col-md-6">
@@ -414,12 +398,12 @@
                                 cambios.</p>
 
                             <button class="btn btn-primary" onclick="window.modalTiempoUso.close();"
-                                style="width:250px; margin-left: 20px;">Cerrar</button>
+                                style="width:250px; margin-left: 100px;">Cerrar</button>
                             <button class="btn btn-primary" onclick="alert('refrescar y guardar info del cubiculo')"
                                 style="width:250px; margin-left: 50px;">Guardar</button>
                         </div>
                         <div class="col-4 align-items-center">
-                            
+
                             <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_ckedtvkj.json"
                                 background="transparent" speed="1"
                                 style="width: 550px; height: 550px; margin-top:-200px; position:relative" loop autoplay>
@@ -428,6 +412,122 @@
                     </div>
                 </dialog>
 
+                <!--Ventana Emergente Asignaciones-->
+                <dialog id="modalAsignaciones" class="ventana" style="width:auto;height:auto;">
+                    <br /><br />
+                    <img src="./images/logo_bibliotec_linea.png" alt="Logo BiblioTEC" />
+                    <h3 class="subtitulo" style="font-size: 26px;">Agregar Cubículo</h3>
+                    <p class="descripcion" style="font-size: 16px; width:auto; height:auto">A continuación se muestran
+                        las reservaciones relacionadas al cubículo seleccionado.</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Cubículo</th>
+                                        <th scope="col">ID Estudiante</th>
+                                        <th scope="col">Estudiante</th>
+                                        <th scope="col">Fecha Reserva</th>
+                                        <th scope="col">Hora Inicio</th>
+                                        <th scope="col">Hora Salida</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <fieldset>
+                                        <tr>
+                                            <th scope="col"><input type="checkbox" /></th>
+                                            <th scope="col">1</td>
+                                            <td scope="col">Ab2341</td>
+                                            <td scope="col">202356505</td>
+                                            <td scope="col">Pancha Carrazco</td>
+                                            <td scope="col">23/12/15</td>
+                                            <td scope="col">08:00am</td>
+                                            <td scope="col">11:00am</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col"><input type="checkbox" /></th>
+                                            <th scope="col">2</td>
+                                            <td scope="col">Ab2341</td>
+                                            <td scope="col">202356505</td>
+                                            <td scope="col">Pancha Carrazco</td>
+                                            <td scope="col">23/12/15</td>
+                                            <td scope="col">08:00am</td>
+                                            <td scope="col">11:00am</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col"><input type="checkbox" /></th>
+                                            <th scope="col">3</td>
+                                            <td scope="col">Ab2341</td>
+                                            <td scope="col">202356505</td>
+                                            <td scope="col">Pancha Carrazco</td>
+                                            <td scope="col">23/12/15</td>
+                                            <td scope="col">08:00am</td>
+                                            <td scope="col">11:00am</td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                            <!--Fin de la tabla-->
+
+                            <br />
+                            <p class="descripcion" style="font-size: 16px; width:auto; height:auto">Recuerde guardar los
+                                cambios.</p>
+
+                            <button class="btn btn-primary" onclick="window.modalAsignaciones.close();"
+                                style="width:250px; margin-left: 100px;">Cerrar</button>
+                            <button class="btn btn-primary" onclick="alert('eliminar y notificar al estudiante')"
+                                style="width:250px; margin-left: 50px;">Eliminar Reserva</button>
+
+                        </div>
+                        <div class="col-4 align-items-center">
+
+                            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_ckedtvkj.json"
+                                background="transparent" speed="1"
+                                style="width: 550px; height: 550px; margin-top:-200px; position:relative" loop autoplay>
+                            </lottie-player>
+                        </div>
+                    </div>
+                </dialog>
+                
+                <!--Ventana emergente notificaciones-->
+                <dialog id="modalNotificacion" class="ventana">
+                    
+                <div class="gradienteInferior">
+                    <div class="container align-content-center">
+                        <div class="row">
+                            <div class="col-4">
+                            </div>
+                            <div class="col-4 align-items-center">
+                                <div><img src="./images/bibliotecSombrero_Logo.png" alt="Logo BiblioTEC" width="255px "
+                                        style="margin-left: 40px; margin-top:20px;" /></div>
+                                <div>
+                                    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_kdx6cani.json"
+                                        background="transparent" speed="1" style="width: 400px; height: 400px;" loop
+                                        autoplay>
+                                    </lottie-player>
+                                </div>
+                                <div class="container align-content-center" style="margin-left: 10px;">
+                                    <h2 class="subtitulo" style="font-size: 26px; color: white; font-weight: bold;">
+                                        Mensaje
+                                        Notificacion</h2>
+                                    <p class="descripcion" style="font-size: 16px; color: white;">
+                                        Detalles de la notificación al correo que se le envío.
+                                    </p>
+                                </div>
+                                <div class="col-4 align-content-end">
+                                    <a href="./paginaInicioEstudiante.html">
+                                        <button type="button"
+                                            onclick="alert('Dar notificacion y volver a pagina que es')" class="boton"
+                                            style="margin-left: 700px; margin-top:-50px;">Aceptar</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="window.modalNotificacion.close();"
+                        style="width:400px;">Cerrar</button>
+                </dialog>
 
                 <!--Fin ventanas emergentes-->
             </div>
