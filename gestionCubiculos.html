@@ -144,7 +144,8 @@
                 <dialog id="modalEliminar" class="ventana">
                     <h3 class="subtitulo" style="font-size: 26px;">Notificación</h3>
                     <p class="descripcion" style="font-size: 16px;">Le informamos que los cubículos que ha seleccionado
-                        han sido eliminados correctamente. Gracias!</p>
+                        han sido eliminados correctamente. Recuerde que la información eliminada no podrá
+                        recuperarse. Gracias!</p>
                     <button class="btn btn-primary" onclick="window.modalEliminar.close();"
                         style="width:400px;">Cerrar</button>
                 </dialog>
@@ -161,7 +162,7 @@
                             <br />
                             <form class="row g-3">
 
-                                <div class="col-md-2">
+                                <div class="col-md-4">
                                     <label for="idCubiculo" class="form-label">ID</label>
                                     <select id="idCubiculo" class="form-select" title="ID Cubiculo" required>
                                         <option selected>ID</option>
@@ -206,12 +207,12 @@
                                         <option>Reservado</option>
                                     </select>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <label for="capacidadCubiculo" class="form-label">Capacidad</label>
                                     <input type="number" class="form-control" id="capacidadCubiculo"
                                         title="Modifique la capacidad del cubículo." required>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <label for="tiempoUso" class="form-label">Tiempo Uso</label>
                                     <input type="number" class="form-control" id="tiempoUso"
                                         title="Ingrese maximo de horas que se puede reservar por día." required>
@@ -219,11 +220,10 @@
                             </form>
                             <br /><br />
                             <p class="descripcion" style="font-size: 16px; width:auto; height:auto">Recuerde guardar
-                                cada vez
-                                que modifica un cubículo.</p>
+                                cada vez que modifica un cubículo.</p><br/>
 
                             <button class="btn btn-primary" onclick="window.modalModificarC.close();"
-                                style="width:250px; margin-left: 20px;">Cerrar</button>
+                                style="width:250px; margin-left: 110px;">Cerrar</button>
                             <button class="btn btn-primary" onclick="alert('refrescar y guardar info del cubiculo')"
                                 style="width:250px; margin-left: 50px;">Guardar</button>
                         </div>
@@ -247,7 +247,7 @@
                         <div class="col-6">
                             <br />
                             <form class="row g-3">
-                                <div class="col-md-2">
+                                <div class="col-md-4">
                                     <label for="idCubiculo" class="form-label">ID</label>
                                     <input type="text" class="form-control" id="idCubiculo"
                                         title="Ingrese el ID del cubículo" required>
@@ -287,12 +287,12 @@
                                         <option>Mantenimiento</option>
                                     </select>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <label for="capacidadCubiculo" class="form-label">Capacidad</label>
                                     <input type="number" class="form-control" id="capacidadCubiculo"
                                         title="Ingrese la capacidad del cubículo máxima." required>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <label for="tiempoUso" class="form-label">Tiempo Uso</label>
                                     <input type="number" class="form-control" id="tiempoUso"
                                         title="Ingrese maximo de horas que se puede reservar por día." required>
@@ -300,18 +300,17 @@
                             </form>
                             <br /><br />
                             <p class="descripcion" style="font-size: 16px; width:auto; height:auto">Recuerde guardar
-                                cada vez que modifica un cubículo.</p>
+                                para agregar el cubículo al sistema.</p><br/>
 
                             <button class="btn btn-primary" onclick="window.modalAgregarC.close();"
-                                style="width:250px; margin-left: 20px;">Cerrar</button>
+                                style="width:250px; margin-left: 110px;">Cerrar</button>
                             <button class="btn btn-primary" onclick="alert('refrescar y guardar info del cubiculo')"
                                 style="width:250px; margin-left: 50px;">Guardar</button>
                                 
                         </div>
                         <div class="col-4 align-items-center">
-                            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_Nggzi9cLYX.json"
-                                background="transparent" speed="1"
-                                style="width: 600px; height: 600px; margin-top:-200px; position:relative" loop autoplay>
+                            <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_ztwoqo04.json"
+                                background="transparent" speed="1" style="width: 600px; height: 600px; margin-top:-200px; position:relative" loop autoplay>
                             </lottie-player>
                         </div>
                     </div>
@@ -321,7 +320,7 @@
                 <dialog id="modalTiempoUso" class="ventana" style="width:auto;height:auto;">
                     <br /><br />
                     <img src="./images/logo_bibliotec_linea.png" alt="Logo BiblioTEC" />
-                    <h3 class="subtitulo" style="font-size: 26px;">Gestionar Disnibilidad Cubículo</h3>
+                    <h3 class="subtitulo" style="font-size: 26px;">Gestionar Disponibilidad Cubículo</h3>
                     <p class="descripcion" style="font-size: 16px; width:auto; height:auto">Modifique la disponibilidad
                         de los cubículos a más detalle.</p>
                     <div class="row">
@@ -416,7 +415,7 @@
                 <dialog id="modalAsignaciones" class="ventana" style="width:auto;height:auto;">
                     <br /><br />
                     <img src="./images/logo_bibliotec_linea.png" alt="Logo BiblioTEC" />
-                    <h3 class="subtitulo" style="font-size: 26px;">Agregar Cubículo</h3>
+                    <h3 class="subtitulo" style="font-size: 26px;">Asignaciones de los Cubículos</h3>
                     <p class="descripcion" style="font-size: 16px; width:auto; height:auto">A continuación se muestran
                         las reservaciones relacionadas al cubículo seleccionado.</p>
                     <div class="row">
@@ -471,8 +470,10 @@
                             <!--Fin de la tabla-->
 
                             <br />
-                            <p class="descripcion" style="font-size: 16px; width:auto; height:auto">Recuerde guardar los
-                                cambios.</p>
+                            <p class="descripcion" style="font-size: 16px; width:auto; height:auto;">Recuerde que los
+                                datos eliminados no se podrán recuperar.</p>
+                                <p class="descripcion" style="font-size: 16px; width:auto; height:auto; margin-top:-16px;"> Las acciones realizadas se estarán notificando
+                                de manera automática al estudiante.</p><br/>
 
                             <button class="btn btn-primary" onclick="window.modalAsignaciones.close();"
                                 style="width:250px; margin-left: 100px;">Cerrar</button>

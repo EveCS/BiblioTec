@@ -135,8 +135,8 @@
                 <dialog id="modalEliminar" class="ventana">
                     <h3 class="subtitulo" style="font-size: 26px;">Notificación</h3><br />
                     <p class="descripcion" style="font-size: 16px;">Le informamos que los estudiantes que ha
-                        seleccionado
-                        han sido eliminados correctamente. Gracias!</p>
+                        seleccionado han sido eliminados correctamente. Recuerde que la información eliminada no podrá
+                        recuperarse. Gracias!</p>
                     <button class="btn btn-primary" onclick="window.modalEliminar.close();"
                         style="width:400px;">Cerrar</button>
                 </dialog>
@@ -145,7 +145,7 @@
                 <dialog id="modalAgregarE" class="ventana" style="width:auto;height:auto;">
 
                     <img src="./images/logo_bibliotec_linea.png" alt="Logo BiblioTEC" />
-                    <h3 class="subtitulo" style="font-size: 26px;">Agregar Cubículo</h3>
+                    <h3 class="subtitulo" style="font-size: 26px;">Agregar Estudiante</h3>
                     <p class="descripcion" style="font-size: 16px; width:auto; height:auto">Ingrese los datos
                         solicitados para agregar el estudiante</p>
                     <div class="row">
@@ -187,7 +187,7 @@
                                         <option>Suspendido</option>
                                     </select>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <label for="sede" class="form-label">Sede</label>
                                     <select id="sede" class="form-select" title="Sede" required>
                                         <option selected>Seleccionar</option>
@@ -210,7 +210,7 @@
                                 el botón guardar para agregar el estudiante.</p>
                             <br /><br />
                             <button class="btn btn-primary" onclick="window.modalAgregarE.close();"
-                                style="width:250px; margin-left: 20px;">Cerrar</button>
+                                style="width:250px; margin-left: 110px;">Cerrar</button>
                             <button class="btn btn-primary" onclick="alert('refrescar y guardar info del cubiculo')"
                                 style="width:250px; margin-left: 50px;">Guardar</button>
 
@@ -229,9 +229,9 @@
                 <dialog id="modalHistorial" class="ventana" style="width:auto;height:auto;">
                     <br /><br />
                     <img src="./images/logo_bibliotec_linea.png" alt="Logo BiblioTEC" />
-                    <h3 class="subtitulo" style="font-size: 26px;">Agregar Cubículo</h3>
-                    <p class="descripcion" style="font-size: 16px; width:auto; height:auto">A continuación se muestran
-                        las reservaciones de cubículos relacionadas al estudiante seleccionado.</p>
+                    <h3 class="subtitulo" style="font-size: 26px;">Historial de Usos</h3>
+                    <p class="descripcion" style="font-size: 16px; width:auto; height:auto">A continuación se muestra el
+                        historial de las reservaciones y usos de cubículos relacionadas al estudiante seleccionado.</p>
                     <div class="row">
                         <div class="col-6">
                             <table class="table">
@@ -251,7 +251,7 @@
                                 <tbody>
                                     <fieldset>
                                         <tr>
-                                            <th scope="col"><input type="checkbox" /></th>
+                                            <th scope="col"></th>
                                             <th scope="col">1</td>
                                             <td scope="col">202356505</td>
                                             <td scope="col">Pancha Carrazco</td>
@@ -262,7 +262,7 @@
                                             <td scope="col">11:00am</td>
                                         </tr>
                                         <tr>
-                                            <th scope="col"><input type="checkbox" /></th>
+                                            <th scope="col"> </th>
                                             <th scope="col">2</td>
                                             <td scope="col">202356505</td>
                                             <td scope="col">Pancha Carrazco</td>
@@ -276,15 +276,13 @@
                             </table>
                             <!--Fin de la tabla-->
 
-                            <br />
-                            <p class="descripcion" style="font-size: 16px; width:auto; height:auto">Recuerde que los
-                                datos eliminados no se podrán recuperar. Las acciones realizadas se estarán notificando
-                                de manera automática al estudiante.</p>
+                            <br /><br />
 
                             <button class="btn btn-primary" onclick="window.modalHistorial.close();"
-                                style="width:250px; margin-left: 100px;">Cerrar</button>
-                            <button class="btn btn-primary" onclick="alert('eliminar y notificar al estudiante')"
-                                style="width:250px; margin-left: 50px;">Eliminar Reserva</button>
+                                style="width:250px; margin-left: 250px;">Cerrar</button>
+                            <!--
+                                <button class="btn btn-primary" onclick="alert('eliminar y notificar al estudiante')"
+                                style="width:250px; margin-left: 50px;">Eliminar Reserva</button>-->
                         </div>
                         <div class="col-4 align-items-center">
 
