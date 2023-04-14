@@ -113,7 +113,8 @@
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button onclick="window.modalEliminar.showModal();"
                             class="btn btn-primary">Eliminar</label></button>
-                        <button type="button" class="btn btn-primary">Estudiante</button>
+                            <button onclick="window.modalModificarE.showModal();" type="button"
+                            class="btn btn-primary">Modificar Estudiante</button>
                         <button onclick="window.modalAgregarE.showModal();" type="button"
                             class="btn btn-primary">Agregar</button>
                     </div>
@@ -153,7 +154,7 @@
                             <br />
                             <form class="row g-3">
                                 <div class="col-md-4">
-                                    <label for="cedula" class="form-label">Idntificación</label>
+                                    <label for="cedula" class="form-label">Identificación</label>
                                     <input type="number" class="form-control" id="cedula" title="Cedula" required>
                                 </div>
                                 <div class="col-md-4">
@@ -224,6 +225,78 @@
                         </div>
                     </div>
                 </dialog>
+
+                <!--Ventana Emergente Agregar-->
+                <dialog id="modalModificarE" class="ventana" style="width:auto;height:auto;">
+
+                    <img src="./images/logo_bibliotec_linea.png" alt="Logo BiblioTEC" />
+                    <h3 class="subtitulo" style="font-size: 26px;">Modificar Cuenta Estudiante</h3>
+                    <p class="descripcion" style="font-size: 16px; width:auto; height:auto">Modifique los datos deseados del estudiante</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <br />
+                            <form class="row g-3">
+                                <div class="col-md-4">
+                                    <label for="cedula" class="form-label">Identificación</label>
+                                    <input type="number" class="form-control" id="cedula" title="Cedula" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="carnet" class="form-label">Carnet</label>
+                                    <input type="number" class="form-control" id="carnet" title="Carnet" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="nombreEstudiante" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="nombreEstudiante"
+                                        title="Nombre Estudiante" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="primerApellido" class="form-label">Primer Apellido</label>
+                                    <input type="text" class="form-control" id="primerApellido" title="Primer Apellido"
+                                        required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="segundoApellido" class="form-label">Segundo Apellido</label>
+                                    <input type="text" class="form-control" id="segundoApellido"
+                                        title="Segundo Apellido" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="edad" class="form-label">Edad</label>
+                                    <input type="number" class="form-control" id="edad" title="Edad" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="estado" class="form-label">Estado</label>
+                                    <select id="estado" class="form-select" title="Estado" required>
+                                        <option selected>Seleccionar</option>
+                                        <option>Activo</option>
+                                        <option>Suspendido</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="sede" class="form-label">Sede</label>
+                                    <select id="sede" class="form-select" title="Sede" required>
+                                        <option selected>Seleccionar</option>
+                                        <option>Cartago</option>
+                                        <option>San José</option>
+                                        <option>Alajuela</option>
+                                        <option>San Carlos</option>
+                                        <option>Limón</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="fechaReserva" class="form-label">Fecha Nacimiento</label>
+                                    <input class="form-control" type="date" id="start" name="trip-start"
+                                        value="2023-04-22" min="1900-01-01" max="2050-12-31" title="Fecha de nacimiento"
+                                        required><br />
+                                </div>
+                            </form>
+
+                            <p class="descripcion" style="font-size: 16px; width:auto; height:auto">Recuerde presionar
+                                el botón actualizar para guardar los cambios del estudiante.</p>
+                            <br /><br />
+                            <button class="btn btn-primary" onclick="window.modalModificarE.close();"
+                                style="width:250px; margin-left: 110px;">Cerrar</button>
+                            <button class="btn btn-primary" onclick="alert('refrescar y guardar info del cubiculo')"
+                                style="width:250px; margin-left: 50px;">Actualizar</button>
 
                 <!--Ventana Emergente Historial-->
                 <dialog id="modalHistorial" class="ventana" style="width:auto;height:auto;">
